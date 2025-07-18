@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Premium Game Server Hosting Support for Minecraft, Rust, ARK, and more.">
+  <title>ZTX Hosting | Support</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #1A1A1A;
+      --secondary: #674CC4;
+      --accent: #8E6CEF;
+      --dark: #000000;
+      --light: #FFFFFF;
+      --gray: #666666;
+      --light-gray: #F0F0F0;
+      --deep-purple-blue: #4D2FDB;
+      --transition-speed: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--light);
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-menu a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all var(--transition-speed);
+    }
+
+    .nav-menu a:hover, .nav-menu a.active {
+      background: var(--light-gray);
+      color: var(--primary);
+    }
+
+    .nav-menu .login-btn {
+      color: var(--secondary);
+      margin-left: 10px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 80px 0;
+      background-color: var(--light);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h1, .section-title h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .support-content {
+      background: var(--light);
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      margin-top: 30px;
+    }
+
+    .support-content h2 {
+      font-size: 1.8rem;
+      color: var(--secondary);
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--light-gray);
+      padding-bottom: 10px;
+    }
+
+    .support-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .contact-info p {
+      margin: 15px 0;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition-speed);
+    }
+
+    .contact-info a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+
+    .faq-item {
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--light-gray);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
+    .ai-assistant-section {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 2px solid var(--light-gray);
+    }
+
+    .ai-assistant-section h2 {
+        margin-top: 0;
+    }
+
+    .ai-input-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .ai-input-group input[type="text"] {
+        flex-grow: 1;
+        padding: 12px 15px;
+        border: 1px solid var(--light-gray);
+        border-radius: 4px;
+        font-size: 1rem;
+        color: var(--primary);
+        outline: none;
+        transition: border-color var(--transition-speed);
+        min-width: 200px;
+    }
+
+    .ai-input-group input[type="text"]:focus {
+        border-color: var(--secondary);
+    }
+
+    .ai-input-group button {
+        padding: 12px 25px;
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--light);
+        border-radius: 4px;
+        background: var(--accent);
+        text-decoration: none;
+        transition: var(--transition-speed);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .ai-input-group button:hover {
+        background: var(--secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(103, 76, 196, 0.3);
+    }
+
+    #ai-response-area {
+        background-color: var(--light-gray);
+        border-radius: 8px;
+        padding: 20px;
+        min-height: 100px;
+        color: var(--primary);
+        font-size: 1rem;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        text-align: left;
+        opacity: 0;
+        transition: opacity var(--transition-speed);
+    }
+
+    #ai-response-area.visible {
+        opacity: 1;
+    }
+    #ai-response-area.loading {
+        color: var(--gray);
+        font-style: italic;
+    }
+    #ai-response-area.error {
+        color: #D8000C;
+        background-color: #FFD2D2;
+    }
+
+    @media (max-width: 768px) {
+      header {
+          padding: 10px 5%;
+      }
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--light);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .section-title {
+        margin-bottom: 40px;
+      }
+      
+      .support-content {
+          padding: 25px;
+      }
+
+      .support-content h2 {
+          font-size: 1.6rem;
+      }
+      .contact-info p {
+          font-size: 1rem;
+      }
+      .faq-item h3 {
+          font-size: 1.2rem;
+      }
+      .ai-input-group {
+          flex-direction: column;
+      }
+      .ai-input-group button {
+          width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://ztxhosting.site/favicon.png" alt="ZTX Logo" />
+    ZTX Hosting
+  </div>
+  <nav class="nav-menu" id="nav-menu">
+    <a href="https://ztxhosting.site/game-hosting">Game Hosting</a>
+    <a href="https://ztxhosting.site/vps">VPS</a>
+    <a href="https://ztxhosting.site/dedicated">Dedicated</a>
+    <a href="https://ztxhosting.site/support" class="support-btn active">Support</a>
+    <a href="https://ztxhosting.site/coming" class="login-btn">Login</a>
+  </nav>
+  <button class="mobile-menu-btn" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h1>Welcome to ZTX Hosting Support</h1>
+      <p>We're here to help you with any questions or issues you might have. Please find our contact information and frequently asked questions below.</p>
+    </div>
+
+    <div class="support-content">
+        <div class="ai-assistant-section">
+            <h2>✨ Smart Support Assistant ✨</h2>
+            <p style="color: var(--gray); margin-bottom: 20px;">Ask our AI assistant any question about hosting, servers, or common technical issues, and get an instant response!</p>
+            <div class="ai-input-group">
+                <input type="text" id="user-question" placeholder="e.g., How do I connect to my server via FTP?" aria-label="Ask a question to the AI assistant">
+                <button id="ask-ai-button">Ask AI <i class="fas fa-magic"></i></button>
+            </div>
+            <div id="ai-response-area" class="ai-response-area">
+                Your answer will appear here...
+            </div>
+        </div>
+
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Discord:</strong> <a href="https://discord.gg/sDBbjb9VJ4" target="_blank">Join our Discord Server</a></p>
+            <p><strong>Email:</strong> <a href="mailto:ztxhosting.in@gmail.com">ztxhosting.in@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/message/AOO4QHZ2USCPG1" target="_blank">Chat with us on WhatsApp</a></p>
+        </div>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+
+        <div class="faq-item">
+            <h3>Q: How do I reset my password?</h3>
+            <p>A: You can reset your password by visiting the login page and clicking on the "Forgot Password" link. Follow the instructions sent to your registered email address.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Q: What payment methods do you accept?</h3>
+            <p>A: We accept various payment methods including credit/debit cards, PayPal, and bank transfers. Please refer to our billing section for a complete list.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Q: How can I upgrade my hosting plan?</h3>
+            <p>A: To upgrade your hosting plan, log in to your client area and navigate to the "Services" section. Select the plan you wish to upgrade and follow the upgrade prompts.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Q: My website is down, what should I do?</h3>
+            <p>A: First, check your internet connection. If that's not the issue, please contact our support team immediately via any of the methods above, providing as much detail as possible.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const askButton = document.getElementById('ask-ai-button');
+    const questionInput = document.getElementById('user-question');
+    const responseArea = document.getElementById('ai-response-area');
+
+    const apiEndpoint = '/api/ask-ai';
+
+    const handleAskAI = async () => {
+      const prompt = questionInput.value.trim();
+      if (!prompt) {
+        responseArea.textContent = "Please enter a question.";
+        responseArea.classList.add('visible', 'error');
+        responseArea.classList.remove('loading');
+        return;
+      }
+
+      responseArea.textContent = "Thinking...";
+      responseArea.classList.add('visible', 'loading');
+      responseArea.classList.remove('error');
+
+      try {
+        const response = await fetch(apiEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt: prompt })
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || `Server responded with status ${response.status}`);
+        }
+
+        const result = await response.json();
+        responseArea.innerHTML = marked.parse(result.answer);
+        
+      } catch (error) {
+        responseArea.textContent = `An error occurred: ${error.message}. Please ensure the backend server is running and the API endpoint is correct.`;
+        responseArea.classList.add('error');
+        console.error('Error fetching from backend:', error);
+      } finally {
+        responseArea.classList.remove('loading');
+        responseArea.classList.add('visible');
+      }
+    };
+    
+    askButton.addEventListener('click', handleAskAI);
+    
+    questionInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            handleAskAI();
+        }
+    });
+  });
+</script>
+
+</body>
+</html>
